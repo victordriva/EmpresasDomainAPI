@@ -26,6 +26,12 @@ flake8-docstrings = "^1.6.0"
 darglint = "^1.8.1"
 dlint = "^0.12.0"
 flake8-bandit = "^3.0.0"
+requests = "^2.27.1"
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "./src"
+]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
