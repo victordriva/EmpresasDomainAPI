@@ -18,7 +18,7 @@ WORKDIR /code
 COPY poetry.lock pyproject.toml /code/
 
 # Project initialization:
-RUN poetry install $(test "$YOUR_ENV" == production && echo "--no-dev") --no-interaction --no-ansi
+RUN poetry install $(test "$PY_ENV" == production && echo "--no-dev") --no-interaction --no-ansi
 
 # Creating folders, and files for a project:
 COPY . /code
