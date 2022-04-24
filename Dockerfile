@@ -22,3 +22,6 @@ RUN poetry install $(test "$YOUR_ENV" == production && echo "--no-dev") --no-int
 
 # Creating folders, and files for a project:
 COPY . /code
+
+# Run the project:
+CMD poetry run python src/main.py
