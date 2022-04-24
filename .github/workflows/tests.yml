@@ -15,6 +15,6 @@ jobs:
       - name: Install dependencies
         run: poetry install
       - name: Run tests
-        run: poetry run pytest --cov --cov-fail-under=90 --cov-report term-missing
+        run: poetry run pytest --cov --cov-fail-under=70 --cov-report term-missing
       - name: Build Docker image
         run: docker build . --file=Dockerfile
